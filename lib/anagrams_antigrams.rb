@@ -1,10 +1,10 @@
 require ('pry')
 
 class String
-  def anagrams_antigrams
-    split_sentence = self.split
-    split_sentence.each do |word|
-      word.capitalize!()
+  def anagrams_antigrams do
+    input_array = self.downcase().split(",")
+
+
     end
     puts split_sentence.join(" ")
     split_sentence.join(" ")
@@ -12,6 +12,6 @@ class String
 end
 
 
-puts "Please enter a word:"
+puts "Please enter two words:"
 input = gets.to_str
 input.anagrams_antigrams

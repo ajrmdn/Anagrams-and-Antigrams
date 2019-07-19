@@ -1,9 +1,9 @@
-require('rspec')
-require('anagrams_antigrams')
+require ('rspec')
+require ('anagrams_antigrams.rb')
 
-describe('#anagrams_antigrams') do
-  it("Compares two words to see if they are anagrams") do
-    expect("ruby, bury".anagrams_antigrams).to(eq("This is an Anagram"))
+describe('String#anagrams_antigrams') do
+  it("tests two words to see if they are anagrams") do
+    expect("ruby, bury".anagrams_antigrams()).to(eq("This is an Anagram"))
   end
   # describe('#anagrams_antigrams') do
   #   it("Capitalizes the word") do
