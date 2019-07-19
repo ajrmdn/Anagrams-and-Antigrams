@@ -6,7 +6,7 @@ class String
 
 
     end
-    puts split_sentence.join(" ")
+    # puts split_sentence.join(" ")
     split_sentence.join(" ")
   end
 end
