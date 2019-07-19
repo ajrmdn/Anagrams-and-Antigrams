@@ -17,12 +17,9 @@ class String
       if input_test.scan(/[aeiou]/).count > 0
         if (word_one_split.join(" ") == word_two_split.join(" "))
           anagram_outcome = "This is an Anagram."
-
+        end
       end
-
-
-  end
-end
+    end
 
 
 p "Please enter two words:"
