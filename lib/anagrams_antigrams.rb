@@ -1,5 +1,5 @@
 require ('pry')
-# require ('rspec')
+require ('rspec')
 
 class String
   define_method(:anagrams) do
