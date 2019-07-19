@@ -1,7 +1,8 @@
 require ('pry')
+require ('rspec')
 
 class String
-  def anagrams_antigrams do
+  define_method 
     input_array = self.downcase().split(",")
 
 
