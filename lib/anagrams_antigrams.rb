@@ -12,6 +12,6 @@ class String
 end
 
 
-puts "Please enter a Movie:"
+puts "Please enter a word:"
 input = gets.to_str
-input.title_case
+input.anagrams_antigrams
