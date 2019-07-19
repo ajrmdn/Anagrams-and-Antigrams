@@ -25,6 +25,6 @@ class String
 end
 
 
-# p "Please enter two words:"
-# input = gets.to_str
-# input.anagrams
+p "Please enter two words:"
+input = gets.to_str
+input.anagrams
