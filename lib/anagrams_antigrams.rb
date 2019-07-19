@@ -18,12 +18,12 @@ class String
         if (word_one_split.join("") == word_two_split.join(""))
           anagram_outcome = "This is an Anagram."
         end
-      
+
 
   end
 end
 
 
-p "Please enter two words:"
-input = gets.to_str
-input.anagrams
+# p "Please enter two words:"
+# input = gets.to_str
+# input.anagrams
