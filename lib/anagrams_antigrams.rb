@@ -4,8 +4,8 @@ require ('pry')
 class String
   define_method(:anagrams) do
     input_array = self.downcase().split(",")
-    word_one = (word_array[0]).split(" ")
-    word_two = (word_array[1]).split(" ")
+    word_one = (input_array[0]).split(" ")
+    word_two = (input_array[1]).split(" ")
 
     word_one_split = word_one.sort()
     word_two_split = word_two.sort()
@@ -17,7 +17,7 @@ class String
       if input_test.scan(/[aeiou]/).count > 0
         if (word_one_split.join(" ") == word_two_split.join(" "))
           anagram_outcome = "This is an Anagram."
-        
+
       end
 
 
