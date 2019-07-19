@@ -1,4 +1,4 @@
-# _Anagram-and-Antigram_
+# _Anagrams-and-Antigrams_
 
 #### _7-19-2019_
 
