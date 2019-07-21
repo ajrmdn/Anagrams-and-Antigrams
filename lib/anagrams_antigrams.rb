@@ -1,27 +1,44 @@
 require ('pry')
-require ('rspec')
 
-class String
-  define_method(:anagrams) do
-    input_array = self.downcase().split(",")
-    word_one = (input_array[0]).split(" ")
-    word_two = (input_array[1]).split(" ")
+class Word
+  attr_accessor(:word_one, :word_two)
 
-    word_one_split = word_one.sort()
-    word_two_split = word_two.sort()
+  def initialize(word_one, word_two)
+      @word_one = word_one
+      @word_two = word_two
+  end
 
-    input_test = word_one.join(" ") + word_two.join(" ")
-    if (word_one & word_two).empty?
-      anagram_outcome = "This is not an Anagram. This is an Antigram"
+  def anagram(word_one, word_two)
+    word_one_array = word_one.downcase.gsub(/[\s+,.?!#@"']/, '').split("").sort
+    word_two_array = word_two.downcase.gsub(/[\s+,.?!#@"']/, '').split("").sort
+
+    if ((word_one_array.length === 0) | (word_two_array.length === 0))
+      "Please enter both words"
+    elsif word_one_array === word_two_array
+      "Thats an anagram!"
     else
-      if input_test.scan(/[aeiou]/).count > 0
-        if (word_one_split.join(" ") == word_two_split.join(" "))
-          anagram_outcome = "This is an Anagram."
-        end
+      "This is not an anagram."
+    end
+  end
+
+  def antigram(word_one, word_two)
+    word_one_array = word_one.downcase.gsub(/[\s+,.?!#@"']/, '').split("")
+    word_two_array = word_two.downcase.gsub(/[\s+,.?!#@"']/, '').split("")
+    is_antigram = true
+    word_one_array.each do |letter|
+      if ((is_antigram == true) & (word_two_array.include?(letter)))
+        is_antigram = false
       end
     end
+    is_antigram
+  end
+
+end
 
 
-p "Please enter two words:"
-input = gets.to_str
-input.anagrams
+
+
+
+# p "Please enter two words:"
+# input = gets.chomp
+# input.anagrams
